@@ -5,31 +5,43 @@ Welcome to your new dbt project!
 Try running the following commands:
 - dbt run
 - dbt test
-                SOURCE DATA
-                    │
-                    ▼
-              PySpark / Databricks
-                    │
-                    ▼
-             ┌──────────────┐
-             │    BRONZE    │
-             └──────┬───────┘
-                    │
-                    ▼
-             ┌──────────────┐
-             │    SILVER    │
-             └──────┬───────┘
-                    │
-                    ▼
-                   dbt
-                    │
-                    ▼
-             ┌──────────────┐
-             │     GOLD     │
-             └──────┬───────┘
-                    │
-                    ▼
-                Power BI
+                                  DATA SOURCES
+                              │
+                              ▼
+                    ┌──────────────────┐
+                    │ PySpark /         │
+                    │ Databricks       │
+                    └────────┬─────────┘
+                             │
+                             ▼
+                    ┌──────────────────┐
+                    │      BRONZE      │
+                    │   Raw / Ingested │
+                    └────────┬─────────┘
+                             │
+                             ▼
+                    ┌──────────────────┐
+                    │      SILVER      │
+                    │ Cleaned /         │
+                    │ Transformed      │
+                    └────────┬─────────┘
+                             │
+                             ▼
+                         ┌───────┐
+                         │  dbt  │
+                         └───┬───┘
+                             │
+                             ▼
+                    ┌──────────────────┐
+                    │       GOLD       │
+                    │ Business-ready   │
+                    │       data       │
+                    └────────┬─────────┘
+                             │
+                             ▼
+                        ┌─────────┐
+                        │Power BI │
+                        └─────────┘
 
 ### Resources:
 - Learn more about dbt [in the docs](https://docs.getdbt.com/docs/introduction)
