@@ -26,12 +26,22 @@ flowchart LR
 
 ```text
 databricks-analytics-engineering/
+├── databricks/
+│   ├── 01_bronze_ingestion.ipynb
+│   ├── 02_silver_transformation.ipynb
+│   └── 03_gold_analytics.ipynb
+│
 ├── models/
-│   ├── silver/
-│   └── gold/
-├── src/
+│   └── silver/
+│       ├── fact_sales.sql
+│       └── schema.yml
+│
 ├── tests/
+├── macros/
+├── seeds/
+├── snapshots/
+├── analyses/
+│
+├── dbt_project.yml
 ├── README.md
-└── dbt_project.yml
-```
-
+└── .gitignore
