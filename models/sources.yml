@@ -1,0 +1,20 @@
+version: 2
+
+sources:
+  - name: bronze
+    database: analytics_engineering
+    schema: bronze
+    description: "Bronze layer containing raw ingested Delta tables."
+
+    tables:
+      - name: customer
+
+      - name: product
+
+      - name: product_category
+
+      - name: product_subcategory
+
+      - name: sales_order_header
+
+      - name: sales_order_detail

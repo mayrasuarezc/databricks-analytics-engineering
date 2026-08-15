@@ -1,0 +1,46 @@
+version: 2
+
+models:
+  - name: fact_sales
+    description: "Sales fact table at order-line grain."
+
+    columns:
+      - name: SalesOrderID
+        description: "Sales order identifier."
+        data_tests:
+          - not_null
+          - relationships:
+              to: source('bronze', 'sales_order_header')
+              field: SalesOrderID
+
+      - name: SalesOrderDetailID
+        description: "Unique sales order line identifier."
+        data_tests:
+          - not_null
+          - unique
+
+      - name: CustomerID
+        description: "Customer associated with the sales order."
+        data_tests:
+          - not_null
+          - relationships:
+              to: source('bronze', 'customer')
+              field: CustomerID
+
+      - name: ProductID
+        description: "Product sold on the order line."
+        data_tests:
+          - not_null
+          - relationships:
+              to: source('bronze', 'product')
+              field: ProductID
+
+      - name: OrderQty
+        description: "Quantity sold."
+        data_tests:
+          - not_null
+
+      - name: LineTotal
+        description: "Total value of the sales order line."
+        data_tests:
+          - not_null
