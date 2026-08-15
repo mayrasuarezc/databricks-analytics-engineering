@@ -1,24 +1,37 @@
-Welcome to your new dbt project!
+# Databricks Analytics Engineering Project
 
-### Using the starter project
+Analytics engineering project demonstrating a modern data transformation pipeline using PySpark, Databricks, dbt and Power BI.
 
-Try running the following commands:
-- dbt run
-- dbt test
-                          ## Data Architecture
+## Data Architecture
 
 ```mermaid
-flowchart TD
-    A[Source Data] --> B[PySpark / Databricks]
-    B --> C[Bronze<br/>Raw / Ingested]
-    C --> D[Silver<br/>Cleaned / Transformed]
-    D --> E[dbt]
-    E --> F[Gold<br/>Business-Ready Data]
-    F --> G[Power BI]
+flowchart LR
+    A["Source Data"] --> B["PySpark / Databricks"]
+    B --> C["Bronze<br/>Raw Data"]
+    C --> D["Silver<br/>Cleaned & Transformed"]
+    D --> E["dbt"]
+    E --> F["Gold<br/>Business-Ready Data"]
+    F --> G["Power BI"]
+```
 
-### Resources:
-- Learn more about dbt [in the docs](https://docs.getdbt.com/docs/introduction)
-- Check out [Discourse](https://discourse.getdbt.com/) for commonly asked questions and answers
-- Join the [chat](https://community.getdbt.com/) on Slack for live discussions and support
-- Find [dbt events](https://events.getdbt.com) near you
-- Check out [the blog](https://blog.getdbt.com/) for the latest news on dbt's development and best practices
+## Tech Stack
+
+- **Data Processing:** PySpark
+- **Data Platform:** Databricks
+- **Transformation & Testing:** dbt
+- **Analytics:** Power BI
+- **Version Control:** Git / GitHub
+
+## Project Structure
+
+```text
+databricks-analytics-engineering/
+├── models/
+│   ├── silver/
+│   └── gold/
+├── src/
+├── tests/
+├── README.md
+└── dbt_project.yml
+```
+
