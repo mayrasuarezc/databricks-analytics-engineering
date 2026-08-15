@@ -5,43 +5,16 @@ Welcome to your new dbt project!
 Try running the following commands:
 - dbt run
 - dbt test
-                                  DATA SOURCES
-                              │
-                              ▼
-                    ┌──────────────────┐
-                    │ PySpark /         │
-                    │ Databricks       │
-                    └────────┬─────────┘
-                             │
-                             ▼
-                    ┌──────────────────┐
-                    │      BRONZE      │
-                    │   Raw / Ingested │
-                    └────────┬─────────┘
-                             │
-                             ▼
-                    ┌──────────────────┐
-                    │      SILVER      │
-                    │ Cleaned /         │
-                    │ Transformed      │
-                    └────────┬─────────┘
-                             │
-                             ▼
-                         ┌───────┐
-                         │  dbt  │
-                         └───┬───┘
-                             │
-                             ▼
-                    ┌──────────────────┐
-                    │       GOLD       │
-                    │ Business-ready   │
-                    │       data       │
-                    └────────┬─────────┘
-                             │
-                             ▼
-                        ┌─────────┐
-                        │Power BI │
-                        └─────────┘
+                          ## Data Architecture
+
+```mermaid
+flowchart TD
+    A[Source Data] --> B[PySpark / Databricks]
+    B --> C[Bronze<br/>Raw / Ingested]
+    C --> D[Silver<br/>Cleaned / Transformed]
+    D --> E[dbt]
+    E --> F[Gold<br/>Business-Ready Data]
+    F --> G[Power BI]
 
 ### Resources:
 - Learn more about dbt [in the docs](https://docs.getdbt.com/docs/introduction)
