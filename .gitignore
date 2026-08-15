@@ -1,5 +1,7 @@
-
 target/
 dbt_packages/
 logs/
 .env
+databricks/backup/
+.venv/
+__pycache__/
