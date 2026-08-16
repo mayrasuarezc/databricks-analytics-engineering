@@ -164,7 +164,8 @@ The dashboard is designed to analyze commercial performance through metrics such
 
 Power BI acts as the primary **analytical and visualization layer** of the solution.
 
----
+<img width="968" height="586" alt="image" src="https://github.com/user-attachments/assets/7f4897fb-d04d-46a8-902c-7138966774cf" />
+
 
 # Power Apps — Business Action Management
 
@@ -211,6 +212,7 @@ The application is designed to demonstrate the integration between **BI insights
 ## Power Apps Data Model
 
 The application uses a dedicated action-tracking structure rather than modifying the analytical Silver layer.
+<img width="1115" height="587" alt="image" src="https://github.com/user-attachments/assets/9374fe57-9c48-4235-8980-51c4ee38f517" />
 
 Example:
 
