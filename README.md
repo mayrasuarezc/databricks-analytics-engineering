@@ -83,7 +83,7 @@ Notebook:
 ```text
 
 ```
-01_bronze_ingestion.ipynb
+databricks/01_bronze_ingestion.ipynb
 ---
 
 ### Silver
@@ -107,7 +107,7 @@ databricks/02_silver_transformation.ipynb
 ### Gold
 
 The Gold layer provides curated analytical data optimized for BI and business analysis.
-<img width="1256" height="698" alt="image" src="https://github.com/user-attachments/assets/9a897310-78d3-467e-ba22-cff45d9650dc" />
+
 
 Notebook:
 
