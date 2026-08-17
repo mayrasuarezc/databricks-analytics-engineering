@@ -83,7 +83,7 @@ Notebook:
 ```text
 
 ```
-databricks/01_bronze_transformation.ipynb
+01_bronze_ingestion.ipynb
 ---
 
 ### Silver
