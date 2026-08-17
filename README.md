@@ -81,7 +81,7 @@ The Databricks notebooks use **PySpark** to ingest and prepare the raw data for 
 Notebook:
 
 ```text
-databricks/01_bronze_ingestion.ipynb
+
 ```
 
 ---
